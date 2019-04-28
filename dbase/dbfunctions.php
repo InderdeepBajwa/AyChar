@@ -7,11 +7,11 @@
     
     function getConnection() {
         // Create connection
-        $connection = new mysqli("localhost", "root", "", "jigdb");
-
-        // Check connection
-        if ($connection->connect_error) {
-            die("Connection failed: " . $connection->connect_error);
+        $conn = oci_connect("ibajwa", "bajw5680", "141.238.9.4/xe");
+        
+        if (!$conn) {
+            $e = oci_error();
+            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
         }
         return $connection;
     }
