@@ -1,6 +1,6 @@
 <?php
   require('head.php');
-  require('../dbase/dbfunctions.php');
+  require_once $_SERVER['DOCUMENT_ROOT'] . '/jig/dbase/dbfunctions.php'
 ?>
 
 <ul>

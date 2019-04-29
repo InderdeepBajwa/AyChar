@@ -7,11 +7,11 @@
     
     function getConnection() {
         // Create connection
-        $conn = oci_connect("ibajwa", "bajw5680", "141.238.9.4/xe");
-        
-        if (!$conn) {
-            $e = oci_error();
-            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+        $connection = new mysqli("db4free.net", "jigpeeps69", "jigpeeps69", "hrdb69");
+
+        // Check connection
+        if ($connection->connect_error) {
+            die("Connection failed: " . $connection->connect_error);
         }
         return $connection;
     }
@@ -47,10 +47,10 @@
         $results = [];
 
         while ($result && $row = $result->fetch_array()) {
-            $result[] = $row;
+            $results[] = $row;
         }
 
-        return $result;
+        return $results;
     }
 
 
