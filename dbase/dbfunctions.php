@@ -47,10 +47,10 @@
         $results = [];
 
         while ($result && $row = $result->fetch_array()) {
-            $result[] = $row;
+            $results[] = $row;
         }
 
-        return $result;
+        return $results;
     }
 
 

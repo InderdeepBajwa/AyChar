@@ -13,20 +13,17 @@
 <div id="SignIn">
     <h2>Login</h2>
     <hr>
-    <form action="" method="post">
+    <form action="../boilerplate/form-validate/login.php" method="post">
         <!--username/email input -->
         <label for="uname"><b>Email:</b></label>
-        <input required type="email" placeholder="Email" name="uname">
+        <input required type="email" placeholder="Email" name="email">
         
         <!--Password input -->
         <label for="pw"><b>Password:</b></label>
-        <input required type="password" placeholder="Password" name="pw">
+        <input required type="password" placeholder="Password" name="password">
         
         <!--Signin button -->
         <input type="submit" value="Sign In" placeholder="SignIn">
-
-        <!--Reset password button -->
-        <input type="reset" name="Sign Up" value="Sign Up">
         
         <!---->
         <input type="reset" name="Forgot" value="Forgot Your Password">
