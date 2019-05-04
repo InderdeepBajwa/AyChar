@@ -8,7 +8,20 @@
         // TODO: Send user to somehwere
         header("Location: /jig");
     }
+
+    
 ?>
+
+<?php 
+$employees = runSafeQuery('SELECT * FROM EMPLOYEES', []);
+?>
+
+<?php foreach($employees as $employee) {?>
+<ul>
+    <li><?php echo $employee['email'] ?></li>
+</ul>
+<?php } ?>
+
 
 <div id="SignIn">
     <h2>Login</h2>
