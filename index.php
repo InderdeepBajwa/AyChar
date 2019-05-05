@@ -2,7 +2,7 @@
 <?php
 
     // navbar
-    require('../partials/nav.php');
+    require('./partials/nav.php');
 
     // Session start
     if(isset($_SESSION['UserToken'])) {
