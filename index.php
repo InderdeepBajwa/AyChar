@@ -1,8 +1,7 @@
-
 <?php
 
     // navbar
-    require('./partials/nav.php');
+    require('../partials/nav.php');
 
     // Session start
     if(isset($_SESSION['UserToken'])) {
@@ -10,10 +9,10 @@
         header("Location: /jig");
     }
 ?>
-<body background="stripes-light.png" id = "myimg">
+<body background="/Jig/assets/img/stripes-light.png" id = "myimg">
 <div id="HomePage">
     <div id = "myimg2">
-        <img src = "HR.jpg" style="float:right;" id = "imgo" border = "5">
+        <img src = "/Jig/assets/img/HR.jpg" style="float:right;" id = "imgo" border = "5">
     </div>
     <div id="title">Manage your company efficiently with <br /> this program for 21st century needs</div>
     <div id="followup">A resource for keeping track of all HR needs all <br /> delivered within one tight and effective package.</div>
