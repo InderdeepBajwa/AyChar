@@ -6,6 +6,12 @@
         session_start();
     }
 
+    if(isset($_SESSION['UserToken'])) {
+        // TODO: Send user to somehwere
+        header("Location: /jig/admin/");
+        exit();
+    }
+    
     if (!$_SESSION) {
         $hashedPassword = md5($_POST['password']);
 
@@ -28,8 +34,9 @@
     }
 
 ?>
-
-<h1 style="text-align:center; padding: 3em;">Welcome <?php echo $_SESSION['UserToken']['first_name'] ?>!</h1>
-<h2>Redirecting you in 2 seconds...<?php header('refresh:2; url=../../admin/home.php') ?></h2>
+<div style="text-align:center; padding: 3em;">
+    <h1>Welcome <?php echo $_SESSION['UserToken']['first_name'] ?>!</h1>
+    <h2>Redirecting you in 2 seconds...<?php header('refresh:2; url=../../admin/') ?></h2>    
+</div>
 
 

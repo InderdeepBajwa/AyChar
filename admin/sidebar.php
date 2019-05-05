@@ -9,6 +9,17 @@
     <title>Admin Panel</title>
 </head>
 <body>
+    <!-- Checking if the user is logged in -->
+    <?php
+        if(session_id() == '') { // Start session if none found
+            session_start();
+        }
+
+        if(!isset($_SESSION['UserToken'])) {
+            // TODO: Send user to somehwere
+            header("Location: /jig/pages/login.php");
+        }
+    ?>
     <div id="sidebar">
         <ul>
             <a href="/jig"><li>Home</li></a>

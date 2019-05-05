@@ -8,3 +8,8 @@
     <title>JIG</title>
 </head>
 <body>
+<?php
+    if(session_id() == '') { // Start session if none found
+        session_start();
+    }
+?>

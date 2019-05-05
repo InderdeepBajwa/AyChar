@@ -1,6 +1,4 @@
 
 <?php
-  require('partials/nav.php')
-
-
+  require('partials/nav.php');
 ?>

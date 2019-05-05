@@ -6,7 +6,7 @@
     // Session start
     if(isset($_SESSION['UserToken'])) {
         // TODO: Send user to somehwere
-        header("Location: /jig");
+        header("Location: /jig/admin/");
     }
 
     
@@ -15,12 +15,6 @@
 <?php 
 $employees = runSafeQuery('SELECT * FROM EMPLOYEES', []);
 ?>
-
-<?php foreach($employees as $employee) {?>
-<ul>
-    <li><?php echo $employee['email'] ?></li>
-</ul>
-<?php } ?>
 
 
 <div id="SignIn">
