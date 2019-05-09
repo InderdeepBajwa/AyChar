@@ -7,7 +7,7 @@
     
     function getConnection() {
         // Create connection
-        $connection = new mysqli("db4free.net", "jigpeeps69", "jigpeeps69", "hrdb69");
+        $connection = new mysqli('localhost', "root", "", "jigdb");
 
         // Check connection
         if ($connection->connect_error) {

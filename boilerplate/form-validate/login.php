@@ -2,14 +2,14 @@
 
     require('../../dbase/dbfunctions.php');
 
-    if(session_id() == '') { // Start session if none found
-        session_start();
-    }
-
+    
     if(isset($_SESSION['UserToken'])) {
         // TODO: Send user to somehwere
         header("Location: /jig/admin/");
         exit();
+    }
+    if(session_id() == '') { // Start session if none found
+        session_start();
     }
     
     if (!$_SESSION) {
