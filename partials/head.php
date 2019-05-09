@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/jig/assets/css/index.css">
     <title>JIG</title>
+
+    <link rel="shortcut icon" href="/jig/assets/img/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <?php

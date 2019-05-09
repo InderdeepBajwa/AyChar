@@ -24,7 +24,7 @@
         <ul>
             <a href="/jig"><li>Home</li></a>
             <li>Employees
-                <a href="#"><li>Add Employee</li></a>
+                <a href="/jig/admin/addEmployee.php"><li>Add Employee</li></a>
                 <a href="#"><li>Edit Employees</li></a>
             </li>
             <a href="#"><li>401 K</li></a>
