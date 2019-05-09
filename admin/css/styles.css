@@ -61,6 +61,7 @@ body {
 
 .employee-table, tr, th {
     border: 1px solid black;
+    width: 30%;
     border-collapse: collapse;
 }
 
