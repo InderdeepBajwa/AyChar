@@ -20,21 +20,24 @@ body {
 }
 
 #sidebar {
-    background-color: aqua;
+    background-color: #cbe896;
     padding: 0;
     margin: 0;
     height: 100vh;
 }
 
 #sidebar ul {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 0px;
     margin: 0;
 }
 
 #sidebar ul li {
-    margin-top: 2em;
-    font-size: 25px;
-    background-color: aquamarine;
+    margin-top: 3em;
+    font-size: 27px;
+    background-color: none;
+    border-style: solid;
+
+    
 
     list-style-type: none;
 }
@@ -63,5 +66,15 @@ body {
     border: 1px solid black;
     width: 30%;
     border-collapse: collapse;
+}
+
+
+.belovedButton{
+    background-color: #079992;
+}
+
+.belovedButton:hover{
+    background-color: #38ada9;
+    cursor:pointer;
 }
 

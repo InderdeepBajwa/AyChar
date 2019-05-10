@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
     <title>Admin Panel</title>
+
+    <script src="signup-validator.js"></script>
+
 </head>
 <body>
     <!-- Checking if the user is logged in -->
@@ -27,8 +30,8 @@
                 <a href="/jig/admin/addEmployee.php"><li>Add Employee</li></a>
                 <a href="#"><li>Edit Employees</li></a>
             </li>
-            <a href="#"><li>401 K</li></a>
-            <a href="#"><li>Settings</li></a>
+            <a href="./Management.php"><li>401 K</li></a>
+            <a href="./settings.php"><li>Settings</li></a>
         </ul>
     </div>
 

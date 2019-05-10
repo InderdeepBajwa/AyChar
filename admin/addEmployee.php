@@ -18,12 +18,14 @@
 <div id="main">
 
     <h2>Add a new employee:</h2>
-    <form action="" method="post">
+    <form action="/jig/boilerplate/form-validate/addEmployee.php" method="post">
         <input type="text" name="first_name" placeholder="First Name">
         <input type="text" name="last_name" placeholder="Last Name">
-        <input type="text" name="password" placeholder="Password">
-        <input type="text" name="confirm-password" placeholder="Confirm Password">
+        <input type="text" name="password" placeholder="Password" onkeyup="check()" id="password">
+        <input type="text" name="confirm_password" onkeyup="check()" placeholder="Confirm Password" id="confirm_password">
         <input type="text" name="salary" placeholder="Salary">
+        <input type="checkbox" name="is_manager" id="is_manager">
+        <input type="submit" value="Add Employee">
     </form>
 
     <h2>All employees:</h2>
