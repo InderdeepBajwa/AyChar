@@ -16,7 +16,7 @@
 
 <div id="main">
 
-<h2>All employees:</h2>
+<h2>Your personalized 401K Management system:</h2>
 
     <table class="employee-table">
         <tr>
@@ -24,7 +24,8 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Salary</th>
-            <th>SSN</th>
+            <th>401K</th>
+            <th>Net Pay</th>
             <th>Edit</th>
         </tr>
         <?php foreach($employees as $employee) { ?>
@@ -35,10 +36,13 @@
 
 
                 <?php $employee_info = runSafeQuery("SELECT * FROM employee_info WHERE employee_id = ?", ["s", $employee['employee_id']]); $employee_info = reset($employee_info); ?>
-                
+                <form action="/jig/boilerplate/form-validate/edit401k.php" method="post">
                 <th><?php echo $employee_info['salary'] ?></th>
-                <th>***-***-<?php echo substr($employee_info['ssn'], -4) ?></th>
-                <th><input type="submit" name="textsss" value="Edit Employee" onClick="document.location.href='<?php echo "/jig/admin/_actuallyEditEmployee.php?id=";?><?php $postData=$employee['employee_id'];echo "$postData"?>'"></th>
+                <th><input type="text" name="401k" value="<?php $_SESSION['401k'] = $employee_info['401k']; echo $_SESSION['401k']; ?>" placeholder="401K"></th>
+                <th><?php $salary = $employee_info['salary'] - $employee_info['401k']; echo $salary > 0 ? '+' .$salary : '-'.$salary ?></th>
+                <th><input type="submit" name="text" value="Edit 401K"></th>
+                <input type="hidden" name="employee_id" value="<?php echo $employee['employee_id'] ?>">
+                </form>
             </tr>
         <?php } ?>
     </table>

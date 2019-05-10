@@ -15,24 +15,22 @@
 
     
     runSafeQuery(
-    "INSERT INTO employees (first_name, last_name, email, is_manager, password) VALUES (?,?,?,?,?)",
+    "UPDATE employees SET first_name=?, last_name = ?, email = ? WHERE employee_id = ?",
     [
-        "sssss",
+        "ssss",
         $_POST['first_name'],
         $_POST['last_name'],
         $_POST['email'],
-        "0",
-        md5($_POST['password']),
+        $_POST['employee_id']
     ]);
 
     runSafeQuery(
-        "INSERT INTO employee_info (employee_id, salary, ssn, 401k) VALUES ((SELECT employee_id from employees where email=?),?,?,?)",
+        "UPDATE employee_info SET salary = ?, ssn = ? WHERE employee_id=?",
     [
-        "ssss",
-        $_POST['email'],
+        "sss",
         $_POST['salary'],
         $_POST['ssn'],
-        0
+        $_POST['employee_id']
     ]);
 
 

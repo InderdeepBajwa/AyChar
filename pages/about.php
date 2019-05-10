@@ -49,7 +49,7 @@ body {
 
  <div class="header">
    <h1>Welcome to JIG!</h1>
-   <p>where your finances are handled</p>
+   <p>where your HR/Finances are handled</p>
  </div>
 
 

@@ -25,8 +25,9 @@
         <input type="password" name="password" placeholder="Password" onkeyup="check()" id="password">
         <input type="password" name="confirm_password" onkeyup="check()" placeholder="Confirm Password" id="confirm_password">
         <input type="text" name="salary" placeholder="Salary">
-        <p id="fuckingManager" style="display:none"><label for="is_manager" onclick="fuckingManager()">U fucking manager bro?</label></p>
-        <input type="checkbox" name="is_manager" id="is_manager">
+        <input type="password" name="ssn" placeholder="SSN #">
+        <label for="is_manager" id="fuckingManager">Are you a manager?</label>
+        <input type="checkbox" name="is_manager" onclick="fuckingManager()" id="is_manager">
         <input type="submit" value="Add Employee">
         <p id="message"></p>
     </form>
@@ -38,12 +39,20 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Salary</th>
+            <th>SSN</th>
         </tr>
         <?php foreach($employees as $employee) { ?>
                 <tr>
                     <th><?php echo $employee['first_name'] ?></th>
                     <th><?php echo $employee['last_name'] ?></th>
                     <th><?php echo $employee['email'] ?></th>
+
+
+                    <?php $employee_info = runSafeQuery("SELECT * FROM employee_info WHERE employee_id = ?", ["s", $employee['employee_id']]); $employee_info = reset($employee_info); ?>
+                    
+                    <th><?php echo $employee_info['salary'] ?></th>
+                    <th>***-***-<?php echo substr($employee_info['ssn'], -4) ?></th>
                 </tr>
 
         <?php } ?>

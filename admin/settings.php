@@ -10,6 +10,7 @@
  
  ?>
 
+
 <style>
 * {
   box-sizing: border-box;
@@ -77,13 +78,11 @@ function getNewUserName() {
 <div class="row">
   <div class="column" style="background-color:#aaa;">
     <h2>Change your name</h2>
-    <p>Click "Edit" to make your first name different</p>
-    <input type="submit" onclick="getNewUserName()" value="Edit">
-  </div>
-  <div class="column" style="background-color:#ccc;">
-    <h2>Change your picture</h2>
-    <p>Click "Edit" to make your profile picture different</p>
-    <input type="submit" value="Edit">
+    <p>Enter your name and click "Edit" to make your first name different</p>
+    <form action="/jig/boilerplate/form-validate/updateF_name.php" method="post">
+      <input type="text" name="first_name" placeholder="Name">
+      <input type="submit" name="submit" text="nbnb">
+    </form>
   </div>
 </div>
 </div>

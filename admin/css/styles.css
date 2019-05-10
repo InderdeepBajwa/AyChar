@@ -62,9 +62,10 @@ body {
 #sidebar ul > :hover {
 }
 
-.employee-table, tr, th {
+table, tr, th {
     border: 1px solid black;
-    width: 30%;
+    min-width: 60%;
+    padding: 1%;
     border-collapse: collapse;
 }
 

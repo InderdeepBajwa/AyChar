@@ -20,7 +20,6 @@ input[type=button], select {
 }
 </style>
 
-<body background="/jig/assets/img/stripes-light.png" id = "myimg">
 
 <div id = "main">
 	<?php
@@ -33,7 +32,7 @@ input[type=button], select {
 		$message = "ERROR! Invalid input, please check your input and try again!";
 		if($sum > 0 && $number1 > 0 && $number2 > 0)
 		{    
-			echo "<h2 align='center'>Your net income amount is: $sum$</h2>";
+			echo "<h2 align='center'>Your net income amount is: $$sum</h2>";
 		}
 		else {
 			echo "<script type='text/javascript'>alert('$message');</script>";

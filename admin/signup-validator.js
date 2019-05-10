@@ -12,7 +12,13 @@ var check = function() {
   }
   
 var fuckingManager = function() {
-  document.getElementById('fuckingManager').style.display="block";
+  var checkbox = document.getElementById('is_manager');
+  
+  if (checkbox.checked) {
+    document.getElementById('fuckingManager').innerHTML = 'Are you REALLY?????';
+  } else {
+    document.getElementById('fuckingManager').innerHTML = 'Are you a manager?';
+  }
 }
 
   var emailCheck = function() {

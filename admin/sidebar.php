@@ -25,12 +25,13 @@
     ?>
     <div id="sidebar">
         <ul>
-            <a href="/jig"><li>Home</li></a>
+            <a href="/jig"><li>Hey  <?php echo $_SESSION["UserToken"]['first_name'] ?></li></a>
             <li>Employees
                 <a href="/jig/admin/addEmployee.php"><li>Add Employee</li></a>
                 <a href="/jig/admin/editEmployee.php"><li>Edit Employees</li></a>
             </li>
-            <a href="./Management.php"><li>401 K</li></a>
+            <a href="./Management.php"><li>401K Calculator</li></a>
+            <a href="./401k.php"><li>401K Management</li></a>
             <a href="./settings.php"><li>Settings</li></a>
         </ul>
     </div>
